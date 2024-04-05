@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() { //onClick define o que acontece quando clica no botao//
             @Override
             public void onClick(View v) { //executado quando o botao e clicado//
-                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);
-                String textoDigitado = etDigiteAqui.getText().toString();
-                Intent i = new Intent(MainActivity.this,NextActivity.class);
-                i.putExtra("texto", textoDigitado);
-                startActivity(i);
+                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);//obtem o elemento de caixa de texto
+                String textoDigitado = etDigiteAqui.getText().toString();//pega o texto dentro da caixa de texto
+                Intent i = new Intent(MainActivity.this,NextActivity.class);//cria uma intençao para navegar para proxima tela
+                i.putExtra("texto", textoDigitado);//coloca o texto que o usuario digitou dentro da intençao
+                startActivity(i);//executa a intencao
             }
         });
     }
